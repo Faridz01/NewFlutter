@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -53,9 +52,9 @@ class DashboardView extends GetView<DashboardController> {
               ],
             ),
           ),
-          body: const TabBarView(
+          body: TabBarView(
             children: [
-              Center(child: Text('Berita Headline')),
+               headline(),
               Center(child: Text('Berita Teknologi')),
               Center(child: Text('Berita Sains')),
             ],
@@ -63,5 +62,51 @@ class DashboardView extends GetView<DashboardController> {
         ),
       ),
     );
+  }
+
+  ListView headline() {
+    return ListView(
+      shrinkWrap: true,
+      children: [
+        Container(
+          padding: const EdgeInsets.only(top: 5, right: 8, left: 8, bottom: 5),
+          height: 110,
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              ClipRRect(
+                borderRadius: BorderRadius.circular(8.0),
+                child: Image.network(
+                  'https://picsum.photos/100'
+                ),
+              ),
+              const SizedBox(
+                width: 10,
+              ),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Text('Sri Mulyani Kecam Hidup Mewah Pejabat Pajak Buntut Kasus Rubicon - CNN Indonesia'),
+                    const SizedBox(
+                      height: 2,
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const [
+                        Text('Author : Muhammad Azwar'),
+                        Text('Sumber : detik.com'),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ],
+      );
   }
 }
