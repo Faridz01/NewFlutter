@@ -58,7 +58,9 @@ class LoginView extends GetView<LoginController> {
                 borderRadius: BorderRadius.circular(20),
               ),
               child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  
+                },
                 child: const Text(
                   'Login',
                   style: TextStyle(
