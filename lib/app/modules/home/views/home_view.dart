@@ -12,6 +12,9 @@ import '../controllers/home_controller.dart';
 class HomeView extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
+
+    HomeController controller = Get.put(HomeController());
+    
     return Scaffold(
       backgroundColor: HexColor("#feeee8"),
       body: Center(
