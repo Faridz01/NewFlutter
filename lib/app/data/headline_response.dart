@@ -1,17 +1,16 @@
 class HeadlineResponse {
   // Deklarasi variabel bool dengan nullable (?)
   bool? succsess;
+   // Deklarasi variabel String dengan nullable (?)
   String? message;
-
   // Deklarasi variabel List yang berisi objek dari kelas Data dengan nullable (?)
   List<Data>? data;
 
-  // Konstruktor dengan parameter opsional
+
+// Konstruktor dengan parameter opsional
   HeadlineResponse({this.succsess, this.message, this.data});
 
   HeadlineResponse.fromJson(Map<String, dynamic> json) {
-
-    // Konstruktor untuk mengambil data dari JSON
     succsess = json['succsess'];
     message = json['message'];
     if (json['data'] != null) {
@@ -47,8 +46,6 @@ class Data {
   String? publishedAt;
   String? content;
 
-
-  // Konstruktor dengan parameter opsional
   Data(
       {this.name,
       this.author,
@@ -60,7 +57,6 @@ class Data {
       this.content});
 
   Data.fromJson(Map<String, dynamic> json) {
-
     // Konstruktor untuk mengambil data dari JSON
     name = json['name'];
     author = json['author'];
@@ -73,8 +69,7 @@ class Data {
   }
 
   Map<String, dynamic> toJson() {
-
-    // Metode untuk mengonversi objek menjadi JSON
+     // Metode untuk mengonversi objek menjadi JSON
     final Map<String, dynamic> data = new Map<String, dynamic>();
     data['name'] = this.name;
     data['author'] = this.author;

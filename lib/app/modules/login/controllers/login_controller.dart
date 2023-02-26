@@ -45,6 +45,7 @@ class LoginController extends GetxController {
     if (decodedResponse['success'] == true) {
       isLoading.value = false;
       authToken.write('token', decodedResponse['access_token']);
+      authToken.write('full_name', decodedResponse['full_name']);
       Get.offAll(() => DashboardView());
     } else {
       isLoading.value = false;

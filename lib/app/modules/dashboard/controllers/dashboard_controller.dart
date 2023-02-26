@@ -9,26 +9,26 @@ import 'package:tokoonline/app/data/technology_response.dart';
 import 'package:tokoonline/app/utils/api.dart';
 
 class DashboardController extends GetxController {
-  final getConnect = GetConnect();
+  final _getConnect = GetConnect();
   final auth = GetStorage();
   
   Future<HeadlineResponse> getHeadline() async {
-    final response = await getConnect.get(BaseUrl.headline);
+    final response = await _getConnect.get(BaseUrl.headline);
     return HeadlineResponse.fromJson(jsonDecode(response.body));
   }
 
   Future<TechnologyResponse> getTechnology() async {
-    final response = await getConnect.get(BaseUrl.technology);
+    final response = await _getConnect.get(BaseUrl.technology);
     return TechnologyResponse.fromJson(jsonDecode(response.body));
   }
 
   Future<SportsResponse> getSport() async {
-    final response = await getConnect.get(BaseUrl.sports);
+    final response = await _getConnect.get(BaseUrl.sports);
     return SportsResponse.fromJson(jsonDecode(response.body));
   }
 
   Future<EntertainmentResponse> getEntertainment() async {
-    final response = await getConnect.get(BaseUrl.entertainment);
+    final response = await _getConnect.get(BaseUrl.entertainment);
     return EntertainmentResponse.fromJson(jsonDecode(response.body));
   }
 }
