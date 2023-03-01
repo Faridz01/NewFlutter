@@ -86,6 +86,12 @@
       "languageVersion": "2.17"
     },
     {
+      "name": "flutter_feather_icons",
+      "rootUri": "file:///C:/mobile-dev/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_feather_icons-2.0.0+1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "flutter_lints",
       "rootUri": "file:///C:/mobile-dev/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_lints-2.0.1",
       "packageUri": "lib/",
@@ -290,6 +296,54 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "url_launcher",
+      "rootUri": "file:///C:/mobile-dev/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher-6.1.10",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "url_launcher_android",
+      "rootUri": "file:///C:/mobile-dev/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher_android-6.0.24",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "url_launcher_ios",
+      "rootUri": "file:///C:/mobile-dev/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher_ios-6.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "url_launcher_linux",
+      "rootUri": "file:///C:/mobile-dev/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher_linux-3.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "url_launcher_macos",
+      "rootUri": "file:///C:/mobile-dev/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher_macos-3.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "url_launcher_platform_interface",
+      "rootUri": "file:///C:/mobile-dev/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher_platform_interface-2.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "url_launcher_web",
+      "rootUri": "file:///C:/mobile-dev/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher_web-2.0.15",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "url_launcher_windows",
+      "rootUri": "file:///C:/mobile-dev/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher_windows-3.0.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "vector_math",
       "rootUri": "file:///C:/mobile-dev/flutter/.pub-cache/hosted/pub.dartlang.org/vector_math-2.1.2",
       "packageUri": "lib/",
@@ -314,7 +368,7 @@
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2023-02-23T07:39:48.546409Z",
+  "generated": "2023-03-01T00:24:39.277464Z",
   "generator": "pub",
   "generatorVersion": "2.18.2"
 }

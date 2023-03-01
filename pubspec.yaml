@@ -16,9 +16,11 @@ dependencies:
   hexcolor: ^3.0.1
   http: ^0.13.5
   lottie: ^2.2.0
+  flutter_feather_icons: ^2.0.0+1
+  url_launcher: ^6.0.3
 
 dev_dependencies: 
-  flutter_lints: ^2.0.0
+  flutter_lints: ^2.0.1
   flutter_test: 
     sdk: flutter
 

@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'package:tokoonline/app/data/entertainment_response.dart';
 import 'package:tokoonline/app/data/headline_response.dart';
 import 'package:tokoonline/app/data/sports_response.dart';
 import 'package:tokoonline/app/data/technology_response.dart';
 import 'package:tokoonline/app/modules/home/views/home_view.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../controllers/dashboard_controller.dart';
 
@@ -19,7 +22,7 @@ class DashboardView extends GetView<DashboardController> {
     final auth = GetStorage();
     return SafeArea(
       child: DefaultTabController(
-        length: 4,
+        length: 5,
         child: Scaffold(
           appBar: PreferredSize(
             preferredSize: const Size.fromHeight(120.0),
@@ -56,6 +59,7 @@ class DashboardView extends GetView<DashboardController> {
                       Tab(text: 'Teknologi'),
                       Tab(text: "Olahraga"),
                       Tab(text: "Hiburan"),
+                      Tab (text: 'Profile'),
                     ],
                   ),
                 ),
@@ -68,13 +72,14 @@ class DashboardView extends GetView<DashboardController> {
               teknologi(controller, scrollController),
               spotrs(controller, scrollController),
               entertainment(controller, scrollController),
+              profile(),
             ],
           ),
           floatingActionButton: FloatingActionButton(
-  onPressed: () async {
-    await auth.erase();
-    Get.offAll(() => HomeView());
-  },
+          onPressed: () async {
+            await auth.erase();
+            Get.offAll(() => HomeView());
+          },
   backgroundColor: Colors.redAccent,
   child: const Icon(Icons.logout_rounded),
 ),
@@ -417,4 +422,72 @@ class DashboardView extends GetView<DashboardController> {
       }
     );
   }
+  SingleChildScrollView profile() {
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          Lottie.network(
+            'https://assets1.lottiefiles.com/packages/lf20_WaQ8yMJuKt.json',
+            height: Get.size.height / 4,
+          ),
+          Text(
+            'Visit Me',
+            style: GoogleFonts.pressStart2p(),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                IconButton(
+                  icon: const Icon(FeatherIcons.github),
+                  color: Colors.black,
+                  onPressed: () async {
+                    if (!await launchUrl(Uri.parse('https://github.com/olipiskandar'))) {
+                      throw Exception('Could not launch');
+                    }
+                  },
+                  iconSize: 40,
+                ),
+                IconButton(
+                  icon: const Icon(FeatherIcons.globe),
+                  color: Colors.indigo,
+                  onPressed: () async {
+                    if (!await launchUrl(Uri.parse('https://olipiskandar.com/'))) {
+                      throw Exception('Could not launch');
+                    }
+                  },
+                  iconSize: 40,
+                ),
+                IconButton(
+                  icon: const Icon(FeatherIcons.twitter),
+                  color: Colors.blueAccent,
+                  onPressed: () async {
+                    if (!await launchUrl(Uri.parse('https://twitter.com/olipiskandar'))) {
+                      throw Exception('Could not launch');
+                    }
+                  },
+                  iconSize: 40,
+                ),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(15.0),
+            child: Text(
+              'Hello.. My name Faridzhk_. Im a backend & mobile developer near Bandung. Coding has become a perfect union of my two favourite passions and I love seeing the results of my efforts helping the users experience. I’m finding unique solutions to complex problems and I’m doing it all while making the worst puns you’ve never heard before.',
+              style: GoogleFonts.pressStart2p(
+                fontSize: 12,
+                height: 2,
+                textStyle: const TextStyle(
+                  letterSpacing: 1.5,
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
 }
+
