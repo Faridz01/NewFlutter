@@ -424,7 +424,8 @@ class DashboardView extends GetView<DashboardController> {
   }
   SingleChildScrollView profile() {
     return SingleChildScrollView(
-      child: Column(
+      child: 
+       Column(
         children: [
           Lottie.network(
             'https://assets1.lottiefiles.com/packages/lf20_WaQ8yMJuKt.json',
@@ -443,32 +444,32 @@ class DashboardView extends GetView<DashboardController> {
                   icon: const Icon(FeatherIcons.github),
                   color: Colors.black,
                   onPressed: () async {
-                    if (!await launchUrl(Uri.parse('https://github.com/olipiskandar'))) {
+                    if (!await launchUrl(Uri.parse('https://github.com/Faridz01'))) {
                       throw Exception('Could not launch');
                     }
                   },
                   iconSize: 40,
                 ),
-                IconButton(
-                  icon: const Icon(FeatherIcons.globe),
-                  color: Colors.indigo,
-                  onPressed: () async {
-                    if (!await launchUrl(Uri.parse('https://olipiskandar.com/'))) {
-                      throw Exception('Could not launch');
-                    }
-                  },
-                  iconSize: 40,
-                ),
-                IconButton(
-                  icon: const Icon(FeatherIcons.twitter),
-                  color: Colors.blueAccent,
-                  onPressed: () async {
-                    if (!await launchUrl(Uri.parse('https://twitter.com/olipiskandar'))) {
-                      throw Exception('Could not launch');
-                    }
-                  },
-                  iconSize: 40,
-                ),
+                // IconButton(
+                //   icon: const Icon(FeatherIcons.globe),
+                //   color: Colors.indigo,
+                //   onPressed: () async {
+                //     if (!await launchUrl(Uri.parse(''))) {
+                //       throw Exception('Could not launch');
+                //     }
+                //   },
+                //   iconSize: 40,
+                // ),
+                // IconButton(
+                //   icon: const Icon(FeatherIcons.),
+                //   color: Colors.blueAccent,
+                //   onPressed: () async {
+                //     if (!await launchUrl(Uri.parse(''))) {
+                //       throw Exception('Could not launch');
+                //     }
+                //   },
+                //   iconSize: 40,
+                // ),
               ],
             ),
           ),
@@ -481,11 +482,11 @@ class DashboardView extends GetView<DashboardController> {
                 height: 2,
                 textStyle: const TextStyle(
                   letterSpacing: 1.5,
+                  ),
                 ),
               ),
             ),
-          ),
-        ],
+          ],
       ),
     );
   }
